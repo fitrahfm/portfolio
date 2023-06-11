@@ -1,7 +1,8 @@
-import { AppProps } from "next/app";
-import { useApollo } from "@/apollo";
+import { AppProps } from "next/app"
+import { useApollo } from "@/apollo"
 import { ApolloProvider } from "@apollo/client"
-import Head from "next/head";
+import Head from "next/head"
+import "styles/globals.scss"
 
 export default function Portfolio({ Component, pageProps }: AppProps) {
   const client = useApollo();
@@ -9,10 +10,10 @@ export default function Portfolio({ Component, pageProps }: AppProps) {
   return (
     <ApolloProvider client={client}>
       <Head>
-          <title>Fitrah Munir</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Component {...pageProps} />
+        <title>Fitrah Munir</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
     </ApolloProvider>
   )
 }

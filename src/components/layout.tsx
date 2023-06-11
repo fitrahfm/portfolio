@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Layout: FunctionComponent<IProps> = ({ main }) => {
-  return <div>{main}</div>
+  return <div className="mx-12 h-28 px-8 py-6">{main}</div>
 }
 
 export default Layout
