@@ -1,10 +1,16 @@
 "use client";
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 
 const Hero: FunctionComponent = () => {
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  }, []);
+
   return (
     <header
-      className={`fm-flex fm-flex-col fm-justify-around fm-h-full lg:fm-justify-center fm-px-[50px] fm-py-[70px] lg:fm-p-0 fm-text-2xl max-[320px]:fm-text-xl lg:fm-text-4xl fm-tracking-widest fm-leading-normal lg:fm-leading-relaxed selection:fm-bg-yellow-400 dark:selection:fm-text-neutral-950`}
+      className={`fm-flex fm-flex-col fm-justify-around fm-h-[calc(var(--vh,_1vh)_*_100)] lg:fm-justify-center fm-px-[50px] fm-py-[70px] lg:fm-p-0 fm-text-2xl max-[320px]:fm-text-xl lg:fm-text-4xl fm-tracking-widest fm-leading-normal lg:fm-leading-relaxed selection:fm-bg-yellow-400 dark:selection:fm-text-neutral-950`}
     >
       <h1 className="fm-relative fm-w-fit after:fm-w-7 max-[320px]:after:fm-w-5 lg:after:fm-w-10 after:fm-h-7 max-[320px]:after:fm-h-5 lg:after:fm-h-10 after:fm-content-[''] after:fm-absolute after:fm-top-[3px] lg:after:fm-top-[8px] after:fm-right-[-2rem] max-[320px]:after:fm-right-[-1.5rem] lg:after:fm-right-[-3rem] after:fm-block after:fm-bg-waving after:fm-bg-no-repeat after:fm-bg-contain">
         Hello!
