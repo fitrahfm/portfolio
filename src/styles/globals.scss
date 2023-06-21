@@ -15,7 +15,7 @@
 @layer components {
   body {
     font-family: var(--font-grotesk), Arial, Helvetica, sans-serif;
-    @apply fm-font-light;
+    @apply fm-font-light fm-h-screen;
 
     .fm-light & {
       @apply fm-bg-stone-50 fm-text-neutral-950;
