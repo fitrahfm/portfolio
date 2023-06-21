@@ -1,12 +1,16 @@
-import { FunctionComponent, ReactNode } from "react"
-import Link from "next/link"
+import { FunctionComponent, ReactNode } from "react";
+import { Hanken_Grotesk } from "next/font/google";
+import "@/styles/globals.scss";
 
 interface IProps {
-  main: ReactNode,
+  main: ReactNode;
 }
 
 const Layout: FunctionComponent<IProps> = ({ main }) => {
-  return <div className="mx-12 h-28 px-8 py-6">{main}</div>
-}
+  const layout =
+    "fm-w-full fm-h-full lg:fm-max-w-[1440px] lg:fm-mx-auto lg:fm-px-24 2xl:fm-px-0";
 
-export default Layout
+  return <div className={layout}>{main}</div>;
+};
+
+export default Layout;
