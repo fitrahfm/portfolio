@@ -1,5 +1,4 @@
 import { FunctionComponent, ReactNode } from "react";
-import { Hanken_Grotesk } from "next/font/google";
 import "@/styles/globals.scss";
 
 interface IProps {
