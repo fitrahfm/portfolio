@@ -1,13 +1,6 @@
-"use client";
 import { FunctionComponent, useEffect } from "react";
 
 const Hero: FunctionComponent = () => {
-  useEffect(() => {
-    let vh = window.innerHeight * 0.01;
-
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }, []);
-
   return (
     <header
       className={`fm-flex fm-flex-col fm-justify-around fm-h-[calc(var(--vh,_1vh)_*_100)] lg:fm-justify-center fm-px-[50px] fm-py-[70px] lg:fm-p-0 fm-text-2xl max-[320px]:fm-text-xl lg:fm-text-4xl fm-tracking-widest fm-leading-normal lg:fm-leading-relaxed selection:fm-bg-yellow-400 dark:selection:fm-text-neutral-950`}
@@ -16,8 +9,9 @@ const Hero: FunctionComponent = () => {
         Hello!
       </h1>
       <h1 className="fm-my-16 max-[320px]:fm-my-[30px] lg:fm-w-[60%] ">
-        I&apos;m <strong className="fm-font-semibold">Fitrah Munir</strong>, a
-        design-minded front-end engineer focused on building beautiful
+        I&apos;m{" "}
+        <strong className="fm-font-semibold fm-select-all">Fitrah Munir</strong>
+        , a design-minded front-end engineer focused on building beautiful
         interfaces & experiences
       </h1>
       <div className="fm-text-sm max-[320px]:fm-text-xs lg:fm-text-xl">
