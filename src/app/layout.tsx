@@ -1,10 +1,10 @@
+import { theme } from "@/helpers/theme-changer";
 import { Metadata } from "next";
 import NerdFace from "@/assets/icons/nerd-face.png";
 
 import { grotesk } from "@/components/font";
 import Layout from "@/components/layout";
 import ThemeSwitch from "@/components/theme-switch";
-import { theme, themeWithPrefix } from "@/helpers/theme-changer";
 
 export const metadata: Metadata = {
   title: "Fitrah Munir - Front-End Developer",
@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={themeWithPrefix}>
+    <html lang="en" className={"fm-" + theme}>
       <body className={grotesk.variable} suppressHydrationWarning={true}>
         <ThemeSwitch theme={theme} />
         <Layout main={children} />

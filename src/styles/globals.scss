@@ -12,16 +12,14 @@
 @tailwind utilities;
 /* Stop purging. */
 
-@layer components {
-  body {
-    font-family: var(--font-grotesk), Arial, Helvetica, sans-serif;
-    @apply fm-font-light;
+body {
+  font-family: var(--font-grotesk), Arial, Helvetica, sans-serif;
+  @apply fm-font-light;
 
-    .fm-light & {
-      @apply fm-bg-stone-50 fm-text-neutral-950;
-    }
-    .fm-dark & {
-      @apply fm-bg-slate-900 fm-text-stone-50;
-    }
+  .fm-light & {
+    @apply fm-bg-stone-50 fm-text-neutral-950;
+  }
+  .fm-dark & {
+    @apply fm-bg-slate-900 fm-text-stone-50;
   }
 }
